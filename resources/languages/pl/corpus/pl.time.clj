@@ -14,6 +14,7 @@
  "dzis"
  "dzisiaj"
  "obecnego dnia"
+ "tego dnia"
  (datetime 2013 2 12)
 
   "wczoraj"
@@ -36,6 +37,7 @@
  "Poniedziałek 18tego Lutego"
  "Poniedziałek 18-tego Lutego"
  "Poniedziałek, 18-tego Lutego"
+ "poniedzialek, 18go Lutego"
  "Pon, 18 Luty"
  (datetime 2013 2 18 :day-of-week 1 :day 18 :month 2)
 
@@ -49,21 +51,25 @@
  (datetime 2013 2 19)
 
   "czwartek"
+  "ten czwartek"
   "czw"
   "czw."
   (datetime 2013 2 14)
 
   "piatek"
+  "ten piatek"
   "pia"
   "pia."
   (datetime 2013 2 15)
 
   "sobota"
+  "ta sobota"
   "sob"
   "sob."
   (datetime 2013 2 16)
 
   "niedziela"
+  "ta niedziela"
   "niedz"
   "niedz."
   (datetime 2013 2 17)
@@ -71,10 +77,13 @@
  "pierwszy marca"
  "pierwszego marca"
  "marzec pierwszy"
+ "1szy marca"
+ "1szy marzec"
   (datetime 2013 3 1 :day 1 :month 3)
 
  "marzec 3"
  "marzec 3ci"
+ "3go marca"
  (datetime 2013 3 3 :day 3 :month 3)
 
  ;; ;;coto
@@ -139,15 +148,17 @@
  "kolejny wtorek"
  "kolejnego wtorku"
  "nastepnego wtorku"
+ "wtorek w przyszłym tygodniu"
+ "wtorek za tydzień"
  (datetime 2013 2 19 :day-of-week 2)
  
- "piatek po nastepnym" ;;DO PPL SAY IT THAT WAY?
+ "piatek po nastepnym" ;;DO PPL SAY IT THAT WAY? - [NOPE THEY DON'T]
  (datetime 2013 2 22 :day-of-week 2)
  
  "nastepny Marzec"
  (datetime 2013 3)
  
- "Marzec po nastepnym"
+ "Marzec po nastepnym" ;; [REMOVE]
  (datetime 2014 3)
  
  "Niedziela, 10 Luty"
@@ -180,7 +191,7 @@
  "przyszły tyg"
  (datetime 2013 2 11 :grain :week)
 
- "ostatni tydzien"
+ "ostatni tydzien" 
  "poprzedniego tygodnia"
  (datetime 2013 2 4 :grain :week)
 
@@ -188,11 +199,11 @@
  "nastepnego tygodnia"
  (datetime 2013 2 18 :grain :week)
 
- "ostatni miesiac"
+ "ostatni miesiac" 
  "poprzedni miesiac"
  "poprzedniego miesiąca"
  "po przedniego miesiąca"
- "ostatniego miesiaca"
+ "ostatniego miesiaca" 
  (datetime 2013 1)
  
  "nastepnego miesiaca"
@@ -200,6 +211,7 @@
 
  "ten kwartał"
  "tego kwartału"
+ "tym kwartale"
  (datetime 2013 1 1 :grain :quarter)
 
  "nastepny kwartał"
@@ -214,10 +226,11 @@
   (datetime 2018 10 1 :grain :quarter)
 
  "poprzedni rok"
- "ostatni rok"
+ "ostatni rok" 
  (datetime 2012)
 
  "ten rok"
+ "tym roku"
  "obecny rok"
  "w obecny rok"
  "w obecnym roku"
@@ -228,13 +241,14 @@
  (datetime 2014)
 
  "poprzednia niedziela"
- ;;"niedziela z ostatniego tygodnia" TODO REVISIT
+ "niedziela z ostatniego tygodnia" ;; [I can see someone say that]
  "niedziela ostatniego tygodnia"
  "niedziela poprzedniego tygodnia"
  "ostatnia niedziela"
  (datetime 2013 2 10 :day-of-week 7)
 
  "ostatni wtorek"
+ "poprzedni wtorek"
  (datetime 2013 2 5 :day-of-week 2)
 
   "nastepny wtorek" ; when today is Tuesday, "mardi prochain" is a week from now
@@ -245,11 +259,11 @@
 
   ;;"wednesday of next week"
   "sroda nastepnego tygodnia"
-  "sroda po nastepnej"
+  "środa w przyszłym tygodniu"
+  "środa za tydzień"
   (datetime 2013 2 20 :day-of-week 3)
 
- "piatek po nastepnym"
- 
+ "piatek nastepnego tygodnia"
  (datetime 2013 2 22 :day-of-week 5)
 
  "poniedzialek tego tygodnia"
@@ -257,9 +271,11 @@
 
  "wtorek tego tygodnia"
  "wtorek w tym tygodniu"
+ "ten wtorek"
   (datetime 2013 2 12 :day-of-week 2)
 
   "środa w tym tygodniu"
+  "ta środa"
   (datetime 2013 2 13 :day-of-week 3)
 
  "pojutrze"
@@ -324,7 +340,7 @@
 
 ;;   ;; Hours
 
- ;;"o 3am" TODO ZOSTAWIAMY AM PM CZY NIE?
+ ;;"o 3am" TODO ZOSTAWIAMY AM PM CZY NIE? [Never saw anyone in Poland using AM/PM]
  "o 3 rano"
  "3 rano"
  "3 z rana"
@@ -346,24 +362,32 @@
  "3 popołudniu"
  "trzecia popoludniu"
  "o trzeciej popoludniu"
+ "piętnasta",
+ "15sta"
+ "o piętnastej"
+ "o 15stej"
  (datetime 2013 2 12 15 :hour 3 :meridiem :pm)
 
  "6 po południu"
  "6 popołudniu"
  "szósta popoludniu"
  "o szostej popoludniu"
+ "o 18stej"
+ "osiemnasta"
  (datetime 2013 2 12 18 :hour 6 :meridiem :pm)
 
  "7 po południu"
  "7 popołudniu"
  "siódma popoludniu"
  "o siodmej popoludniu"
+ "dziewiętnastej"
  (datetime 2013 2 12 19 :hour 7 :meridiem :pm)
 
  "8 wieczorem"
  "8 popołudniu"
  "osma w nocy"
  "ósma wieczorem"
+ "dwudziesta"
  (datetime 2013 2 12 20 :hour 8 :meridiem :pm)
  
  "dziewiata wieczorem"
@@ -379,6 +403,8 @@
  "9 nocą"
  "9 w nocy"
  "o dziewiatej w nocy"
+ "dwudziesta pierwsza"
+ "dwudziestapierwsza"
  (datetime 2013 2 12 21 :hour 9 :meridiem :pm)
 
  "dziesiąta wieczorem"
@@ -388,6 +414,7 @@
  "dziesiata nocą"
  "10 w nocy"
  "o dziesiatej w nocy"
+ "dwudziestej drugiej"
  (datetime 2013 2 12 22 :hour 10 :meridiem :pm)
 
  "jedenasta wieczorem"
@@ -395,12 +422,15 @@
  "11 w nocy"
  "11 wieczorem"
  "o jedenastej wieczorem"
+ "dwudziestejtrzeciej"
  (datetime 2013 2 12 23 :hour 11 :meridiem :pm)
 
  "jutro o drugiej"
+ "jutro o 14stej"
  (datetime 2013 2 13 2)
 
  "po jutrze o drugiej"
+ "po jutrze o czternastej"
  (datetime 2013 2 14 2)
  
  ;;   "3ish pm" ;; FIXME pm overrides precision
@@ -410,11 +440,13 @@
  "koło trzeciej"
  "o koło trzeciej"
  "mniej wiecej o 3"
+ "tak o 15stej"
  ;;   "at about 3pm"
  (datetime 2013 2 12 15 :hour 3 :meridiem :pm) ;; :precision "approximate"
 
  ;;   "tomorrow 5pm sharp" ;; FIXME precision is lost
  "jutro równo o piątej popołudniu" 
+ "jutro równo o 17-stej" 
  (datetime 2013 2 13 17 :hour 5 :meridiem :pm) ;; :precision "exact"
 
  ;;   "at 15 past 3pm"
@@ -485,7 +517,8 @@
  (datetime 2013 2 12 4 30 1)
  
  "w minute"
- "w ciagu minute"
+ "w ciagu minuty"
+ "przez minutę"
  (datetime 2013 2 12 4 31 0)
  
  "w 2 minuty"
@@ -505,6 +538,7 @@
  
  "w godzinę"
  "w 1h"
+ "w przeciągu godziny"
  (datetime 2013 2 12 5 30)
  
  "w ciagu kilku godzin"
@@ -523,6 +557,7 @@
  (datetime 2013 2 13 4)
  
  "3 lata od dziś"
+ "za trzy lata od dzisiaj"
  (datetime 2016 2)
  
  "w 7 dni"
@@ -585,12 +620,17 @@
 ;;   ; Seasons
 
   "to lato"
+  "tego lata"
   (datetime-interval [2013 6 21] [2013 9 24])
 
   "ta zima"
+  "tej zimy"
   (datetime-interval [2012 12 21] [2013 3 21])
 
 ;;   ; US holidays (http://www.timeanddate.com/holidays/us/)
+  "Wigilia Bożego Narodzenia"
+  "Wigilia"
+  (datetime 2013 12 24)
 
   "święta Bożego Narodzenia"
   "boże narodzenie"
@@ -626,6 +666,7 @@
   (datetime 2013 10 31)
 
   "dzień dziękczynienia"
+  "dziękczynienie"
   "thanksgiving"
   (datetime 2013 11 28)
 
@@ -731,7 +772,8 @@
  "Czerwiec 13-15"
  "Czerwca 13 do 15"
  "Czerwca 13tego do 15tego"
- "Czerwiec 13 po 15" ;; mowi sie tak?
+ "Czerwca 13tego aż do 15tego"
+ "Czerwiec 13 po 15" ;; mowi sie tak? [rzczej nie]
  ;; "July 13 through 15"
  "Czerwiec 13 - Czerwiec 15"
  (datetime-interval [2013 7 13] [2013 7 16])
